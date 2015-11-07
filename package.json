@@ -1,0 +1,24 @@
+{
+  "name": "bahn-disturbance",
+  "version": "0.1.0",
+  "description": "Hackathon S2 / Azure",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukaswelte/bahn-disturbance.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lukaswelte/bahn-disturbance/issues"
+  },
+  "homepage": "https://github.com/lukaswelte/bahn-disturbance",
+  "dependencies": {
+    "azure-storage": "^0.6.0",
+    "express": "^4.13.3",
+    "node-7z": "^0.3.0"
+  }
+}
