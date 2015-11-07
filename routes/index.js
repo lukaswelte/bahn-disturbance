@@ -30,7 +30,7 @@ router.get('/map', function(req, res, next) {
   });
 });
 
-router.get('/import', function(req, res, next) {
+/*router.get('/import', function(req, res, next) {
   importer.extract("zugsonar.20151106.json.stream.7z");
   res.render('index', {title: 'Imported'});
 });
@@ -42,6 +42,6 @@ router.get('/list', function (req, res, next) {
   });
 
 
-});
+});*/
 
 module.exports = router;
