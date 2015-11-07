@@ -5,6 +5,10 @@ var db = require('../service/database');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  res.send("OK");
+});
+
+router.get('/map', function(req, res, next) {
   db.getItemsBetweenTime(1446761624000, 1546764445027, function (err, data) {
     if (err) {
       console.error(err);
