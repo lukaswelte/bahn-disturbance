@@ -54,7 +54,37 @@ function getItems (callback) {
                 callback(null, results);
             }
         });
-    }
+}
+
+function getItemsBetweenTime(start, end, callback) {
+        var self = this;
+
+        var querySpec = {
+            query: 'SELECT * FROM ' + collectionDefinition + ' c WHERE c.start >= @start AND c["end"] <= @end',
+            parameters: [{
+              name: "@start",
+              value: 1446761624034
+            }, {
+              name: "@end",
+              value: 1446769945028
+            }]
+        };
+
+        // var querySpec = {
+        //     query: 'SELECT * FROM ' + collectionDefinition + ' c'
+        // };
+
+        console.log("Query Spec:", querySpec);
+
+        client.queryDocuments(myCollection._self, querySpec).toArray(function (err, results) {
+            if (err) {
+                callback(err);
+
+            } else {
+                callback(null, results);
+            }
+        });
+}
 
 function cleanup(client, database) {
     client.deleteDatabase(database._self, function(err) {
@@ -67,5 +97,6 @@ module.exports = {
   insert: insert,
   cleanup: cleanup,
   readCollection: readCollection,
-  getItems: getItems
+  getItems: getItems,
+  getItemsBetweenTime: getItemsBetweenTime
 };
