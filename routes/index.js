@@ -3,7 +3,6 @@ var router = express.Router();
 var importer = require('../importer/import');
 var db = require('../service/database');
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
   res.send("OK");
 });
@@ -26,22 +25,8 @@ router.get('/map', function(req, res, next) {
     });
 
     var d = [].concat.apply([], heatmapData);
-    res.render('index', { title: 'Express', heatmapData: JSON.stringify(d) });
+    res.render('index', { title: 'Bahn Disturbance', heatmapData: JSON.stringify(d) });
   });
 });
-
-/*router.get('/import', function(req, res, next) {
-  importer.extract("zugsonar.20151106.json.stream.7z");
-  res.render('index', {title: 'Imported'});
-});
-
-router.get('/list', function (req, res, next) {
-
-  db.getItems(function (err, items) {
-    res.send(items);
-  });
-
-
-});*/
 
 module.exports = router;

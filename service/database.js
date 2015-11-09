@@ -14,7 +14,6 @@ dbutils.getOrCreateDatabase(client, databaseDefinition, function (err, database)
       if(err) return console.log(err);
       console.log('created collection');
       myCollection = collection;
-
   });
 });
 
@@ -40,7 +39,6 @@ function readCollection(callback) {
 }
 
 function getItems (callback) {
-        var self = this;
 
         var querySpec = {
             query: 'SELECT * FROM ' + collectionDefinition + ' c'
@@ -69,10 +67,6 @@ function getItemsBetweenTime(start, end, callback) {
               value: 1446799945028
             }]
         };
-
-        // var querySpec = {
-        //     query: 'SELECT * FROM ' + collectionDefinition + ' c'
-        // };
 
         console.log("Query Spec:", querySpec);
 
