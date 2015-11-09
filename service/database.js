@@ -66,7 +66,7 @@ function getItemsBetweenTime(start, end, callback) {
               value: 1446761624034
             }, {
               name: "@end",
-              value: 1446769945028
+              value: 1446799945028
             }]
         };
 
